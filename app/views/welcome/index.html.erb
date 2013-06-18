@@ -1,0 +1,8 @@
+<h1> Thanks for visiting our Game. </h1>
+<% if signed_in?  %>
+  <%= link_to "Sign Out", :destroy_user_session, :method => :delete %>
+<% end %>
+ <%= link_to "Sign Up", :new_user_registration %> <br>
+ <%= link_to "Sign In", :new_user_session %>
+ <br>
+ <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
