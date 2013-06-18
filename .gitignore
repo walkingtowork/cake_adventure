@@ -14,5 +14,4 @@
 /log/*.log
 /tmp
 
-# Stop the database.yml file from being git tracked
-/config/database.yml
+config/database.yml

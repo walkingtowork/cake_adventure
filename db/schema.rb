@@ -11,7 +11,66 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130618151553) do
+ActiveRecord::Schema.define(:version => 20130618225238) do
+
+  create_table "backgrounds", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "img_url"
+    t.integer  "scene_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "characters", :force => true do |t|
+    t.string   "name"
+    t.string   "img_url"
+    t.integer  "x_pos"
+    t.integer  "y_pos"
+    t.integer  "game_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "characters_scenes_tables", :id => false, :force => true do |t|
+    t.integer  "character_id"
+    t.integer  "scene_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  create_table "games", :force => true do |t|
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "inventories", :force => true do |t|
+    t.integer  "character_id"
+    t.integer  "user_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  create_table "items", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "img_url"
+    t.integer  "x_pos"
+    t.integer  "y_pos"
+    t.integer  "background_id"
+    t.integer  "inventory_id"
+    t.integer  "scene_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  create_table "scenes", :force => true do |t|
+    t.string   "name"
+    t.integer  "game_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
