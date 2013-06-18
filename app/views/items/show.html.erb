@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @item.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @item.description %>
+</p>
+
+<p>
+  <b>Img url:</b>
+  <%= @item.img_url %>
+</p>
+
+<p>
+  <b>X pos:</b>
+  <%= @item.x_pos %>
+</p>
+
+<p>
+  <b>Y pos:</b>
+  <%= @item.y_pos %>
+</p>
+
+<p>
+  <b>Background:</b>
+  <%= @item.background_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %>
