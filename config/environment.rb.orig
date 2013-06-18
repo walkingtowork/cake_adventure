@@ -1,9 +1,0 @@
-# Load the rails application
-require File.expand_path('../application', __FILE__)
-
-# Initialize the rails application
-<<<<<<< HEAD
-Adventure::Application.initialize!
-=======
-CakeAdventure::Application.initialize!
->>>>>>> 4f4b30c7fdab1d0dd051ac6369236349bae4be6e

@@ -1,8 +1,0 @@
-# This file is used by Rack-based servers to start the application.
-
-require ::File.expand_path('../config/environment',  __FILE__)
-<<<<<<< HEAD
-run Adventure::Application
-=======
-run CakeAdventure::Application
->>>>>>> 4f4b30c7fdab1d0dd051ac6369236349bae4be6e
