@@ -1,5 +1,15 @@
 <p id="notice"><%= notice %></p>
 
+<div class="room kitchen">
+  <img class="stove" src="/images/kitchen_oven.png" style="bottom: 0px; left: 25px;">
+  <img class="table" src="/images/kitchen_table.png" style="bottom: 0px; left: 255px">
+  <img class="door" src="/images/kitchen_door.png" style="bottom: 0px; right: 0px;">
+  <img class="shelf" src="/images/kitchen_shelf.png" style="top: 170px; left: 15px;">
+  <img class="shelf" src="/images/kitchen_shelf.png" style="top: 80px; left: 15px;">
+  <img class="pot" src="/images/kitchen_pot.png" style="top: 123px; left: 90px;">
+  <img class="window" src="/images/kitchen_window.png" style="top: 30px; left: 310px">
+</div>
+
 <p>
   <b>Name:</b>
   <%= @background.name %>
@@ -14,6 +24,8 @@
   <b>Img url:</b>
   <%= @background.img_url %>
 </p>
+
+
 
 
 <%= link_to 'Edit', edit_background_path(@background) %> |

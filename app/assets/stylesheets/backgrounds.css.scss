@@ -1,3 +1,21 @@
 // Place all the styles related to the Backgrounds controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.room {
+  text-align: center;  height: 540px;
+  width: 800px;
+  margin: 0 auto;
+  position:relative;
+  &.kitchen {
+    background: transparent url('/images/kitchen_background.png') 50% 50%;
+  }
+  // &.backyard {
+  //   background: transparent url('/images/backyard_background.png') 50% 50%;
+  // }
+  img {
+    position:absolute;
+  }
+}
+
+
