@@ -1,6 +1,6 @@
 class Character < ActiveRecord::Base
   has_and_belongs_to_many :scenes
-  belong_to :game
+  belongs_to :game
   has_one :inventory
 
 
