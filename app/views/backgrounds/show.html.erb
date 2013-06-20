@@ -1,14 +1,21 @@
 <p id="notice"><%= notice %></p>
 
-<div class="room kitchen">
-  <img class="stove" src="/images/kitchen_oven.png" style="bottom: 0px; left: 25px;">
-  <img class="table" src="/images/kitchen_table.png" style="bottom: 0px; left: 255px">
-  <img class="door" src="/images/kitchen_door.png" style="bottom: 0px; right: 0px;">
-  <img class="shelf" src="/images/kitchen_shelf.png" style="top: 170px; left: 15px;">
-  <img class="shelf" src="/images/kitchen_shelf.png" style="top: 80px; left: 15px;">
-  <img class="pot" src="/images/kitchen_pot.png" style="top: 123px; left: 90px;">
-  <img class="window" src="/images/kitchen_window.png" style="top: 30px; left: 310px">
+<!-- <div class="room kitchen">
+  <img class="oven" src="/images/kitchen_oven.png" style="left: 25px; bottom: 0px;">
+  <img class="table" src="/images/kitchen_table.png" style="left: 255px; bottom: 0px;">
+  <img class="door" src="/images/kitchen_door.png" style="left: 555px; bottom: 0px;">
+  <img class="shelf" src="/images/kitchen_shelf.png" style="left: 15px; bottom: 354px;">
+  <img class="shelf" src="/images/kitchen_shelf.png" style="left: 15px; bottom: 440px;">
+  <img class="pot" src="/images/kitchen_pot.png" style="left: 90px; bottom: 368px;">
+  <img class="window" src="/images/kitchen_window.png" style="left: 310px; bottom: 356px;">
+</div> -->
+
+<div class="room <%= @background.name %>">
+  <% @background.each do |item| %>
+    <img src="<%= item.img_url %>" style="left:<%= item.x_pos %>px; bottom:<%= item.y_pos %>px;">
+  <% end %>
 </div>
+
 
 <p>
   <b>Name:</b>
