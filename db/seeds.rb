@@ -32,7 +32,7 @@ shelf   = Item.create(:name          => 'shelf',
                       :scene_id      => 1
                       )
 pot     = Item.create(:name          => 'pot',
-                      :description   => "It's the same size as the cake! Maybe someone hid it in here as a joke! …Nope.",
+                      :description   => "It's the same size as the cake! Maybe someone hid it in here as a joke! ...Nope.",
                       :img_url       => '/images/kitchen_pot.png',
                       :x_pos         => 90,
                       :y_pos         => 368,
@@ -41,7 +41,7 @@ pot     = Item.create(:name          => 'pot',
                       :scene_id      => 1
                       )
 table   = Item.create(:name          => 'table',
-                      :description   => 'Covered in crumbs of delicious cake. It smells so tasty. You wonder if wood is edible…',
+                      :description   => 'Covered in crumbs of delicious cake. It smells so tasty. You wonder if wood is edible...',
                       :img_url       => '/images/kitchen_table.png',
                       :x_pos         => 255,
                       :y_pos         => 0,
@@ -49,7 +49,7 @@ table   = Item.create(:name          => 'table',
                       :inventory_id  => 0,
                       :scene_id      => 1
                       )
-window  = Item.create(:name          => '',
+window  = Item.create(:name          => 'window',
                       :description   => "What a lovely day out! It would be a perfect birthday... if your cake hadn't been stolen.",
                       :img_url       => '/images/kitchen_window.png',
                       :x_pos         => 310,
@@ -58,8 +58,8 @@ window  = Item.create(:name          => '',
                       :inventory_id  => 0,
                       :scene_id      => 1
                       )
-door    = Item.create(:name          => '',
-                      :description   => "This door just leads out into the back yard…but wait! What's that on the handle? Frosting!",
+door    = Item.create(:name          => 'door',
+                      :description   => "This door just leads out into the back yard...but wait! What's that on the handle? Frosting!",
                       :img_url       => '/images/kitchen_door.png',
                       :x_pos         => 555,
                       :y_pos         => 0,
