@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <!-- <div class="room kitchen">
   <img class="oven" src="/images/kitchen_oven.png" style="left: 25px; bottom: 0px;">
   <img class="table" src="/images/kitchen_table.png" style="left: 255px; bottom: 0px;">
@@ -11,31 +9,16 @@
 </div> -->
 
 <div class="room <%= @background.name %>">
+
+
   <% @background.items.each do |item| %>
     <img src="<%= item.img_url %>" style="left:<%= item.x_pos %>px; bottom:<%= item.y_pos %>px;" data-message="<%= item.description %>">
   <% end %>
-  <div id="description">Test</div>
+  <div id="textbox">
+    Welcome to the <%= @background.name %>. <%= @background.description %>
+  </div>
 </div>
 
-
-
-<p>
-  <b>Name:</b>
-  <%= @background.name %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @background.description %>
-</p>
-
-<p>
-  <b>Img url:</b>
-  <%= @background.img_url %>
-</p>
-<p>
-<%= image_tag @background.img_url %>
-</p>
 
 <div class="something" style="left: <%= @door.x_pos %>; "
 

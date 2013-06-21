@@ -1,15 +1,28 @@
 $(document).ready(function(){
   var image = $('img');
-  var description = $('#description');
 
-  image.on('click', show_image_info);
+  var textbox = $('#textbox');
 
-  function show_image_info() {
-    description.hide();
+  image.on('click', show_item_message);
+
+  textbox.on('click', function() {
+    $(this).hide();
+  });
+
+  function show_item_message() {
+    textbox.hide();
     var img = $(this);
-    description.text(img.data('message'));
-    description.fadeIn();
+    textbox.text(img.data('message'));
+    textbox.fadeIn();
+
+
 
   }
+
+
+
+
+
+
 });
 
