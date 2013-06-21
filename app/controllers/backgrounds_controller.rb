@@ -14,7 +14,7 @@ class BackgroundsController < ApplicationController
   # GET /backgrounds/1.json
   def show
     @background = Background.find(params[:id])
-
+    @door =  Item.find_by_name("door")
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @background }
