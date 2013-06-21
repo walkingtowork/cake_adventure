@@ -14,9 +14,10 @@
   <% @background.items.each do |item| %>
     <img src="<%= item.img_url %>" style="left:<%= item.x_pos %>px; bottom:<%= item.y_pos %>px;" data-message="<%= item.description %>">
   <% end %>
+  <div id="description">Test</div>
 </div>
 
-<div id="description">Test</div>
+
 
 <p>
   <b>Name:</b>
