@@ -18,7 +18,7 @@ class CharactersControllerTest < ActionController::TestCase
 
   test "should create character" do
     assert_difference('Character.count') do
-      post :create, character: { img_url: @character.img_url, name: @character.name, x-pos: @character.x-pos, y-pos: @character.y-pos }
+      post :create, character: { img_url: @character.img_url, name: @character.name, x_pos: @character.x_pos, ypos: @character.y_pos }
     end
 
     assert_redirected_to character_path(assigns(:character))
@@ -35,7 +35,7 @@ class CharactersControllerTest < ActionController::TestCase
   end
 
   test "should update character" do
-    put :update, id: @character, character: { img_url: @character.img_url, name: @character.name, x-pos: @character.x-pos, y-pos: @character.y-pos }
+    put :update, id: @character, character: { img_url: @character.img_url, name: @character.name, x_pos: @character.x_pos, y_pos: @character.y_pos }
     assert_redirected_to character_path(assigns(:character))
   end
 
