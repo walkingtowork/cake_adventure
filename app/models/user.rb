@@ -22,7 +22,12 @@ has_one :inventory
                            email:auth.info.email,
                            password:Devise.friendly_token[0,20]
                            )
+      game = Game.create(user_id: user.id)
+      scene = Scene.create(name: "#{user.name}'s scene", game_id: game.id)
+      
     end
+    
+    user.
     user
   end
 
