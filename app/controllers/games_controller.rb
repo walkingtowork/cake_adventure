@@ -13,7 +13,10 @@ class GamesController < ApplicationController
   # GET /games/1
   # GET /games/1.json
   def show
+    @user =  @game.user
     @game = Game.find(params[:id])
+    @scene = @game.scene
+    @user_inv =
 
     respond_to do |format|
       format.html # show.html.erb
