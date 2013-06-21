@@ -1,7 +1,11 @@
 $(document).ready(function(){
-  var image = $('img');
-
   var textbox = $('#textbox');
+
+  var image = $('img');
+  var conversation = $('conversation');
+
+
+
 
   image.on('click', show_item_message);
 

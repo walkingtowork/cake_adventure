@@ -9,7 +9,9 @@
 </div> -->
 
 <div class="room <%= @background.name %>">
+  <div class="textbox conversation">
 
+  </div>
 
   <% @background.items.each do |item| %>
     <img src="<%= item.img_url %>" style="left:<%= item.x_pos %>px; bottom:<%= item.y_pos %>px;" data-message="<%= item.description %>">
