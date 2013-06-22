@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  statement: MyText
+  character_id: 1
+  conversation_id: 1
+
+two:
+  statement: MyText
+  character_id: 1
+  conversation_id: 1

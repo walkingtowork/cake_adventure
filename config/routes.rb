@@ -1,4 +1,10 @@
 Adventure::Application.routes.draw do
+  resources :dialogues
+
+
+  resources :conversations
+
+
   resources :inventories
 
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130618225238) do
+ActiveRecord::Schema.define(:version => 20130622025813) do
 
   create_table "backgrounds", :force => true do |t|
     t.string   "name"
@@ -32,11 +32,32 @@ ActiveRecord::Schema.define(:version => 20130618225238) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "characters_conversations_tables", :id => false, :force => true do |t|
+    t.integer "character_id"
+    t.integer "conversation_id"
+  end
+
   create_table "characters_scenes_tables", :id => false, :force => true do |t|
     t.integer  "character_id"
     t.integer  "scene_id"
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
+  end
+
+  create_table "conversations", :force => true do |t|
+    t.string   "name"
+    t.integer  "background_id"
+    t.integer  "character_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  create_table "dialogues", :force => true do |t|
+    t.text     "statement"
+    t.integer  "character_id"
+    t.integer  "conversation_id"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
   create_table "games", :force => true do |t|

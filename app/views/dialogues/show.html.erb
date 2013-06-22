@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Statement:</b>
+  <%= @dialogue.statement %>
+</p>
+
+<p>
+  <b>Character:</b>
+  <%= @dialogue.character_id %>
+</p>
+
+<p>
+  <b>Conversation:</b>
+  <%= @dialogue.conversation_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_dialogue_path(@dialogue) %> |
+<%= link_to 'Back', dialogues_path %>

@@ -1,3 +1,15 @@
+eggplant = Character.create(:name       => 'Eggplant',
+                            :img_url    => '/images/character_eggplant.png',
+                            :x_pos      => 0, #from the right
+                            :y_pos      => 0, #from the bottom
+                            :game_id    => 0
+  )
+tomato  = Character.create(:name        => 'Tomato',
+                            :img_url    => '/images/character_tomato.png',
+                            :x_pos      => 0,
+                            :y_pos      => 0,
+                            :game_id    => 0
+  )
 kitchen = Background.create(:name        => 'kitchen',
                             :description => 'This is where food is made!',
                             :img_url     => '/images/kitchen_background.png',
@@ -67,3 +79,30 @@ door    = Item.create(:name          => 'door',
                       :inventory_id  => 0,
                       :scene_id      => 1
                       )
+
+
+# DIALOGUE
+script = File.open("db/dialogue.txt")
+script.each_line do |line|
+  convo_name_words = line.split(':')
+
+  convo = convo_name_words[0]
+  conversation = Conversation.find_or_create_by_name(convo)
+
+  name = convo_name_words[1]
+  character = Character.find_by_name(name)
+
+  words = convo_name_words[2]
+  dialogue = Dialogue.create(:statement => words, :character_id => character.id, :conversation_id => conversation.id)
+end
+
+
+
+
+
+
+
+
+
+
+
