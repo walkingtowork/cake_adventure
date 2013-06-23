@@ -2,7 +2,8 @@ kitchen = Background.create(:name        => 'kitchen',
                             :description => 'This is where food is made!',
                             :img_url     => '/images/kitchen_background.png',
                             :scene_id    => 1,
-                            :id          => 1
+                            :id          => 1,
+                            :proto       => true
                             )
 oven    = Item.create(:name          => 'oven',
                       :description   => 'It smells like delicious, delicious cake! Sadly, there is no cake to be found.',
@@ -11,7 +12,8 @@ oven    = Item.create(:name          => 'oven',
                       :y_pos         => 0,
                       :background_id => kitchen.id,
                       :inventory_id  => 0,
-                      :scene_id      => 1
+                      :scene_id      => 1,
+                      :proto       => true
                       )
 shelf   = Item.create(:name          => 'shelf',
                       :description   => "Beautiful, handmade wooden shelves. They are empty of cake, however.",
@@ -20,7 +22,8 @@ shelf   = Item.create(:name          => 'shelf',
                       :y_pos         => 354,
                       :background_id => kitchen.id,
                       :inventory_id  => 0,
-                      :scene_id      => 1
+                      :scene_id      => 1,
+                      :proto       => true
                       )
 shelf   = Item.create(:name          => 'shelf',
                       :description   => "Beautiful, handmade wooden shelves. They are empty of cake, however.",
@@ -29,7 +32,8 @@ shelf   = Item.create(:name          => 'shelf',
                       :y_pos         => 440,
                       :background_id => kitchen.id,
                       :inventory_id  => 0,
-                      :scene_id      => 1
+                      :scene_id      => 1,
+                      :proto       => true
                       )
 pot     = Item.create(:name          => 'pot',
                       :description   => "It's the same size as the cake! Maybe someone hid it in here as a joke! ...Nope.",
@@ -38,7 +42,8 @@ pot     = Item.create(:name          => 'pot',
                       :y_pos         => 368,
                       :background_id => kitchen.id,
                       :inventory_id  => 0,
-                      :scene_id      => 1
+                      :scene_id      => 1,
+                      :proto       => true
                       )
 table   = Item.create(:name          => 'table',
                       :description   => 'Covered in crumbs of delicious cake. It smells so tasty. You wonder if wood is edible...',
@@ -47,7 +52,8 @@ table   = Item.create(:name          => 'table',
                       :y_pos         => 0,
                       :background_id => kitchen.id,
                       :inventory_id  => 0,
-                      :scene_id      => 1
+                      :scene_id      => 1,
+                      :proto       => true
                       )
 window  = Item.create(:name          => 'window',
                       :description   => "What a lovely day out! It would be a perfect birthday... if your cake hadn't been stolen.",
@@ -56,7 +62,8 @@ window  = Item.create(:name          => 'window',
                       :y_pos         => 356,
                       :background_id => kitchen.id,
                       :inventory_id  => 0,
-                      :scene_id      => 1
+                      :scene_id      => 1,
+                      :proto       => true
                       )
 door    = Item.create(:name          => 'door',
                       :description   => "This door just leads out into the back yard...but wait! What's that on the handle? Frosting!",
@@ -65,5 +72,6 @@ door    = Item.create(:name          => 'door',
                       :y_pos         => 0,
                       :background_id => kitchen.id,
                       :inventory_id  => 0,
-                      :scene_id      => 1
+                      :scene_id      => 1,
+                      :proto       => true
                       )

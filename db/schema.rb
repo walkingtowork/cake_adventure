@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130621234849) do
+ActiveRecord::Schema.define(:version => 20130623100921) do
 
   create_table "backgrounds", :force => true do |t|
     t.string   "name"
@@ -41,8 +41,10 @@ ActiveRecord::Schema.define(:version => 20130621234849) do
 
   create_table "games", :force => true do |t|
     t.integer  "user_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+    t.integer  "current_session"
+    t.integer  "current_bg"
   end
 
   create_table "inventories", :force => true do |t|
