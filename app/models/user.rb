@@ -24,10 +24,9 @@ has_one :inventory
                            )
       game = Game.create(user_id: user.id)
       scene = Scene.create(name: "#{user.name}'s scene", game_id: game.id)
-      
+
     end
-    
-    user.
+
     user
   end
 

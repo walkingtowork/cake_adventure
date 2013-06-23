@@ -5,5 +5,6 @@ class Item < ActiveRecord::Base
 
   attr_accessible :background_id, :description, :img_url, :name, :x_pos, :y_pos, :inventory_id, :scene_id
   
-  def initialize(type, 
+  def initialize(type)
+  end
 end

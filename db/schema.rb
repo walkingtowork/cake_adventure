@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130618225238) do
+ActiveRecord::Schema.define(:version => 20130621234849) do
 
   create_table "backgrounds", :force => true do |t|
     t.string   "name"
@@ -63,6 +63,7 @@ ActiveRecord::Schema.define(:version => 20130618225238) do
     t.integer  "scene_id"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
+    t.boolean  "proto"
   end
 
   create_table "scenes", :force => true do |t|
