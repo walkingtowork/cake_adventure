@@ -9,17 +9,16 @@
 </div> -->
 
 <div class="room <%= @background.name %>">
-  <div class="textbox conversation">
-
-  </div>
 
   <% @background.items.each do |item| %>
     <img src="<%= item.img_url %>" style="left:<%= item.x_pos %>px; bottom:<%= item.y_pos %>px;" data-message="<%= item.description %>">
   <% end %>
-  <div id="textbox">
+  <div class="textbox" id="item_box" style="display: none"></div>
+  <div class="textbox" id="dialogue_box">
     <%= render "dialogues/dialogue" %>
   </div>
-  <img src="/images/character_eggplant.png" style="right: 0px; bottom: 0px;">
+  <%= render "dialogues/character" %>
+<!--   <img src="/images/character_eggplant.png" style="right: 0px; bottom: 0px;"> -->
 </div>
 
 

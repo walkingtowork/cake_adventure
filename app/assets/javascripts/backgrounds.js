@@ -1,19 +1,24 @@
 $(document).ready(function(){
-  var textbox = $('#textbox');
+  var dialogue_box = $('#dialogue_box');
+  var item_box = $('#item_box');
+
+  dialogue_box.on('click', function() {
+    $.ajax({url: "/dialogues/2.js"});
+
+  });
 
   var image = $('img');
-  var conversation = $('conversation');
 
-  textbox.on('click', function() {
+  item_box.on('click', function() {
     $(this).hide();
     image.on('click', show_item_message);
   });
 
   function show_item_message() {
-    textbox.hide();
+    item_box.hide();
     var img = $(this);
-    textbox.text(img.data('message'));
-    textbox.fadeIn();
+    item_box.text(img.data('message'));
+    item_box.fadeIn();
     image.off('click');
   }
 

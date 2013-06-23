@@ -13,7 +13,7 @@
   img {
     position:absolute;
   }
-  #textbox {
+  .textbox {
     position: absolute;
     width: 780px;
     height: 100px;
@@ -31,6 +31,11 @@
     line-height: 20px;
 
     z-index: 20;
+  }
+  #character {
+    right: 0;
+    bottom: 0;
+    z-index: 10;
   }
 }
 
