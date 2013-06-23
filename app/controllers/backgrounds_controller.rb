@@ -15,6 +15,9 @@ class BackgroundsController < ApplicationController
   def show
     @background = Background.find(params[:id])
     @door =  Item.find_by_name("door")
+
+    @dialogue = Conversation.find_by_background_id(@background.id).dialogues[0]
+
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @background }

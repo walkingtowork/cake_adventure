@@ -1,3 +1,4 @@
+# CHARACTERS
 eggplant = Character.create(:name       => 'Eggplant',
                             :img_url    => '/images/character_eggplant.png',
                             :x_pos      => 0, #from the right
@@ -10,12 +11,16 @@ tomato  = Character.create(:name        => 'Tomato',
                             :y_pos      => 0,
                             :game_id    => 0
   )
+
+# BACKGROUNDS
 kitchen = Background.create(:name        => 'kitchen',
                             :description => 'This is where food is made!',
                             :img_url     => '/images/kitchen_background.png',
                             :scene_id    => 1,
                             :id          => 1
                             )
+
+# ITEMS
 oven    = Item.create(:name          => 'oven',
                       :description   => 'It smells like delicious, delicious cake! Sadly, there is no cake to be found.',
                       :img_url       => '/images/kitchen_oven.png',
@@ -79,6 +84,7 @@ door    = Item.create(:name          => 'door',
                       :inventory_id  => 0,
                       :scene_id      => 1
                       )
+
 
 
 # DIALOGUE

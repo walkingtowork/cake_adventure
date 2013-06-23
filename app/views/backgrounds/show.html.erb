@@ -17,9 +17,9 @@
     <img src="<%= item.img_url %>" style="left:<%= item.x_pos %>px; bottom:<%= item.y_pos %>px;" data-message="<%= item.description %>">
   <% end %>
   <div id="textbox">
-    Welcome to the <%= @background.name %>. <%= @background.description %>
+    <%= render "dialogues/dialogue" %>
   </div>
-  <!-- <img src="/images/character_eggplant.png" style="right: 0px; bottom: 0px;"> -->
+  <img src="/images/character_eggplant.png" style="right: 0px; bottom: 0px;">
 </div>
 
 
