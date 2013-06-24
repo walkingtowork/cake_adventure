@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130623100921) do
+ActiveRecord::Schema.define(:version => 20130623232122) do
 
   create_table "backgrounds", :force => true do |t|
     t.string   "name"
@@ -22,21 +22,22 @@ ActiveRecord::Schema.define(:version => 20130623100921) do
     t.datetime "updated_at",  :null => false
   end
 
+  create_table "backgrounds_items", :id => false, :force => true do |t|
+    t.integer  "background_id"
+    t.integer  "item_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
   create_table "characters", :force => true do |t|
     t.string   "name"
     t.string   "img_url"
     t.integer  "x_pos"
     t.integer  "y_pos"
     t.integer  "game_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "characters_scenes_tables", :id => false, :force => true do |t|
-    t.integer  "character_id"
-    t.integer  "scene_id"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+    t.integer  "background_id"
   end
 
   create_table "games", :force => true do |t|
@@ -60,11 +61,10 @@ ActiveRecord::Schema.define(:version => 20130623100921) do
     t.string   "img_url"
     t.integer  "x_pos"
     t.integer  "y_pos"
-    t.integer  "background_id"
     t.integer  "inventory_id"
     t.integer  "scene_id"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
     t.boolean  "proto"
   end
 

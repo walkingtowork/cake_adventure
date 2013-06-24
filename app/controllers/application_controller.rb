@@ -1,9 +1,13 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  
-  def session_info(logged_in_user)
-      
-    
+
+  def get_scene_from_user(logged_in_user)
+
   end
-    
+
+  def get_background(scene, background)
+
+  end
+
+
 end
