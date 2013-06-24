@@ -4,7 +4,6 @@ class CreateCharactersScenesTables < ActiveRecord::Migration
       t.integer :character_id
       t.integer :scene_id
 
-      t.timestamps
     end
   end
 end

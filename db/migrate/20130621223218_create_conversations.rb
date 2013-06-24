@@ -9,3 +9,4 @@ class CreateConversations < ActiveRecord::Migration
     end
   end
 end
+n
