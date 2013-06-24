@@ -1,3 +1,5 @@
+<p id="notice"><%= notice %></p>
+
 <!-- <div class="room kitchen">
   <img class="oven" src="/images/kitchen_oven.png" style="left: 25px; bottom: 0px;">
   <img class="table" src="/images/kitchen_table.png" style="left: 255px; bottom: 0px;">
@@ -7,7 +9,6 @@
   <img class="pot" src="/images/kitchen_pot.png" style="left: 90px; bottom: 368px;">
   <img class="window" src="/images/kitchen_window.png" style="left: 310px; bottom: 356px;">
 </div> -->
-jquery room.replace
 
 <div class="room <%= @background.name %> " style="background: transparent url('<%= @background.img_url %>')">
   <% @background.items.each do |item| %>

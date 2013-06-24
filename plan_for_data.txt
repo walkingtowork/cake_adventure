@@ -1,0 +1,14 @@
+seeds.rb should generatte a prototype object that can be used to create 
+new instances of that object. Each instance of an object should have its own
+prototype (sleeping ca vs awake catvs gone back to sleep cat.)
+
+To pull a prototype of a given object, you should use 
+new_item = Item.find_by_name("item_name").where(:proto == true).dup
+
+then set the appropriate associations. 
+
+new_item.inventory_id = new_inventory.id 
+
+etc etc 
+
+Then create siblings and children in the same way.

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130622025813) do
+ActiveRecord::Schema.define(:version => 20130618225238) do
 
   create_table "backgrounds", :force => true do |t|
     t.string   "name"
@@ -20,6 +20,14 @@ ActiveRecord::Schema.define(:version => 20130622025813) do
     t.integer  "scene_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+    t.boolean  "proto"
+  end
+
+  add_index "backgrounds", ["name"], :name => "index_backgrounds_on_name"
+
+  create_table "backgrounds_items", :id => false, :force => true do |t|
+    t.integer "background_id"
+    t.integer "item_id"
   end
 
   create_table "characters", :force => true do |t|
@@ -30,40 +38,20 @@ ActiveRecord::Schema.define(:version => 20130622025813) do
     t.integer  "game_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-  end
-
-  create_table "characters_conversations_tables", :id => false, :force => true do |t|
-    t.integer "character_id"
-    t.integer "conversation_id"
+    t.integer "background_id"
   end
 
   create_table "characters_scenes_tables", :id => false, :force => true do |t|
     t.integer  "character_id"
     t.integer  "scene_id"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
-  end
-
-  create_table "conversations", :force => true do |t|
-    t.string   "name"
-    t.integer  "background_id"
-    t.integer  "character_id"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
-  end
-
-  create_table "dialogues", :force => true do |t|
-    t.text     "statement"
-    t.integer  "character_id"
-    t.integer  "conversation_id"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
   end
 
   create_table "games", :force => true do |t|
     t.integer  "user_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+    t.integer  "current_session"
+    t.integer  "current_bg"
   end
 
   create_table "inventories", :force => true do |t|
@@ -79,11 +67,11 @@ ActiveRecord::Schema.define(:version => 20130622025813) do
     t.string   "img_url"
     t.integer  "x_pos"
     t.integer  "y_pos"
-    t.integer  "background_id"
     t.integer  "inventory_id"
     t.integer  "scene_id"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+    t.boolean  "proto"
   end
 
   create_table "scenes", :force => true do |t|
