@@ -64,6 +64,18 @@ end
 
 make_backgrounds
 
+# CHARACTERS
+eggplant = Character.create(:name       => 'Eggplant',
+                            :img_url    => '/images/character_eggplant.png',
+                            :x_pos      => 0, #from the right
+                            :y_pos      => 0
+  )
+tomato  = Character.create(:name        => 'Tomato',
+                            :img_url    => '/images/character_tomato.png',
+                            :x_pos      => 0,
+                            :y_pos      => 0
+  )
+
 oven    = Item.create(:name          => 'oven',
                       :description   => 'It smells like delicious, delicious cake! Sadly, there is no cake to be found.',
                       :img_url       => '/images/kitchen_oven.png',
@@ -170,3 +182,26 @@ sleeping_cat        = Item.create(:name          => 'sleeping_cat',
                       :scene_id      => 1,
                       :proto       => true
                       )
+
+# CONVERSATION
+intro   = Conversation.create(:name           => 'intro',
+                              :background_id  => '1',
+                              :character_id   => '1',
+                              :character_id   => '2'
+                      )
+
+
+# DIALOGUE
+script = File.open("db/dialogue.txt")
+script.each_line do |line|
+  convo_name_words = line.split(':')
+
+  convo = convo_name_words[0]
+  conversation = Conversation.find_or_create_by_name(convo)
+
+  name = convo_name_words[1]
+  character = Character.find_by_name(name)
+
+  words = convo_name_words[2]
+  dialogue = Dialogue.create(:statement => words, :character_id => character.id, :conversation_id => conversation.id)
+end
