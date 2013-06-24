@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130624071729) do
+ActiveRecord::Schema.define(:version => 20130624075743) do
 
   create_table "backgrounds", :force => true do |t|
     t.string   "name"
@@ -23,9 +23,11 @@ ActiveRecord::Schema.define(:version => 20130624071729) do
     t.boolean  "proto"
   end
 
+  add_index "backgrounds", ["name"], :name => "index_backgrounds_on_name"
+
   create_table "backgrounds_items", :id => false, :force => true do |t|
-    t.integer  "background_id"
-    t.integer  "item_id"
+    t.integer "background_id"
+    t.integer "item_id"
   end
 
   create_table "characters", :force => true do |t|

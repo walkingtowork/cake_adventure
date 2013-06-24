@@ -10,7 +10,7 @@
   <img class="window" src="/images/kitchen_window.png" style="left: 310px; bottom: 356px;">
 </div> -->
 
-<div class="room <%= @background.name %>">
+<div class="room <%= @background.name %> " style="background: transparent url('<%= @background.img_url %>')">
   <% @background.items.each do |item| %>
     <img src="<%= item.img_url %>" style="left:<%= item.x_pos %>px; bottom:<%= item.y_pos %>px;" data-message="<%= item.description %>">
   <% end %>

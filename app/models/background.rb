@@ -1,4 +1,4 @@
-class Background < ActiveRecord::Base
+youclass Background < ActiveRecord::Base
   belongs_to :scene
   has_and_belongs_to_many :items
   has_many :characters

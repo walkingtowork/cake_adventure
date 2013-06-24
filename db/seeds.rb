@@ -115,6 +115,7 @@ table   = Item.create(:name          => 'table',
                       :scene_id      => 1,
                       :proto       => true
                       )
+table.background_ids = [@kitchen.id]
 window  = Item.create(:name          => 'window',
                       :description   => "What a lovely day out! It would be a perfect birthday... if your cake hadn't been stolen.",
                       :img_url       => '/images/kitchen_window.png',
