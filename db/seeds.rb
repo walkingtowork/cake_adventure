@@ -4,7 +4,6 @@ def make_backgrounds
                               :description => 'This is where food is made!',
                               :img_url     => '/images/kitchen_background.png',
                               :scene_id    => 1,
-                              :id          => 1,
                               :proto       => true
                               )
   @backyard = Background.create(:name        => 'backyard',
@@ -62,52 +61,56 @@ def make_backgrounds
                               :proto       => true
                               )
 end
+
+make_backgrounds
+
 oven    = Item.create(:name          => 'oven',
                       :description   => 'It smells like delicious, delicious cake! Sadly, there is no cake to be found.',
                       :img_url       => '/images/kitchen_oven.png',
                       :x_pos         => 25,
                       :y_pos         => 0,
-                      :background_id => kitchen.id,
                       :inventory_id  => 0,
                       :scene_id      => 1,
                       :proto       => true
                       )
+oven.background_ids = [@kitchen.id]
+
 shelf   = Item.create(:name          => 'shelf',
                       :description   => "Beautiful, handmade wooden shelves. They are empty of cake, however.",
                       :img_url       => '/images/kitchen_shelf.png',
                       :x_pos         => 15,
                       :y_pos         => 354,
-                      :background_id => kitchen.id,
                       :inventory_id  => 0,
                       :scene_id      => 1,
                       :proto       => true
                       )
-shelf   = Item.create(:name          => 'shelf',
+shelf.background_ids = [@kitchen.id]
+
+shelf_two   = Item.create(:name          => 'shelf',
                       :description   => "Beautiful, handmade wooden shelves. They are empty of cake, however.",
                       :img_url       => '/images/kitchen_shelf.png',
                       :x_pos         => 15,
                       :y_pos         => 440,
-                      :background_id => kitchen.id,
                       :inventory_id  => 0,
                       :scene_id      => 1,
                       :proto       => true
                       )
+shelf_two.background_ids = [@kitchen.id]
 pot     = Item.create(:name          => 'pot',
                       :description   => "It's the same size as the cake! Maybe someone hid it in here as a joke! ...Nope.",
                       :img_url       => '/images/kitchen_pot.png',
                       :x_pos         => 90,
                       :y_pos         => 368,
-                      :background_id => kitchen.id,
                       :inventory_id  => 0,
                       :scene_id      => 1,
                       :proto       => true
                       )
+pot.background_ids = [@kitchen.id]
 table   = Item.create(:name          => 'table',
                       :description   => 'Covered in crumbs of delicious cake. It smells so tasty. You wonder if wood is edible...',
                       :img_url       => '/images/kitchen_table.png',
                       :x_pos         => 255,
                       :y_pos         => 0,
-                      :background_id => kitchen.id,
                       :inventory_id  => 0,
                       :scene_id      => 1,
                       :proto       => true
@@ -117,28 +120,27 @@ window  = Item.create(:name          => 'window',
                       :img_url       => '/images/kitchen_window.png',
                       :x_pos         => 310,
                       :y_pos         => 356,
-                      :background_id => kitchen.id,
                       :inventory_id  => 0,
                       :scene_id      => 1,
                       :proto       => true
                       )
+window.background_ids = [@kitchen.id]
 door    = Item.create(:name          => 'door',
                       :description   => "This door just leads out into the back yard...but wait! What's that on the handle? Frosting!",
                       :img_url       => '/images/kitchen_door.png',
                       :x_pos         => 555,
                       :y_pos         => 0,
-                      :background_id => kitchen.id,
                       :inventory_id  => 0,
                       :scene_id      => 1,
                       :proto       => true
                       )
+door.background_ids = [@kitchen.id]
 
 backyard_door    = Item.create(:name          => 'backyard_door',
                       :description   => "This door leads to the kitchen where your cake was pilfered. Le sigh.",
                       :img_url       => '/images/kitchen_door.png',
                       :x_pos         => 344,
                       :y_pos         => 205,
-                      :background_id => kitchen.id,
                       :inventory_id  => 0,
                       :scene_id      => 1,
                       :proto       => true
@@ -148,7 +150,6 @@ backyard_nav_left    = Item.create(:name          => 'backyard_nav_left',
                       :img_url       => '/images/blank_box_nav.png',
                       :x_pos         => 5,
                       :y_pos         => 205,
-                      :background_id => kitchen.id,
                       :scene_id      => 1,
                       :proto       => true
                       )
@@ -157,7 +158,14 @@ backyard_nav_right    = Item.create(:name          => 'backyard_nav_right',
                       :img_url       => '/images/blank_box_nav.png',
                       :x_pos         => 696,
                       :y_pos         => 202,
-                      :background_id => kitchen.id,
+                      :scene_id      => 1,
+                      :proto       => true
+                      )
+sleeping_cat        = Item.create(:name          => 'sleeping_cat',
+                      :description   => "This is one sleepy cat. He is determined to stay asleep no matter how much you inspecth him.",
+                      :img_url       => '/images/ph.png',
+                      :x_pos         => 122,
+                      :y_pos         => 4,
                       :scene_id      => 1,
                       :proto       => true
                       )

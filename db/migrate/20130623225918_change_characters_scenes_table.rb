@@ -6,7 +6,7 @@ class ChangeCharactersScenesTable < ActiveRecord::Migration
     create_table :backgrounds_characters, :id => false do |t|
       t.integer :background_id
       t.integer :character_id
-      t.timestamps
+
     end
 
 
