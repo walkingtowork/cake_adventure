@@ -2,3 +2,5 @@ intro:Eggplant:I can't wait to see the cake you baked for my birthday!
 intro:Tomato:...Oh no! Your cake was right here! Where could it have gone!?
 intro:Eggplant:Maybe you left it in the oven?
 intro:Tomato:I am sure I left it on the table, but we can look around...
+backyard:Tomato:Hmmm...No one is here but the sleepy old cat. I wonder if he saw anything?
+backyard:Eggplant:Curious how this ends? Sponsor us on kickstarter!

@@ -1,15 +1,3 @@
-<p id="notice"><%= notice %></p>
-
-<!-- <div class="room kitchen">
-  <img class="oven" src="/images/kitchen_oven.png" style="left: 25px; bottom: 0px;">
-  <img class="table" src="/images/kitchen_table.png" style="left: 255px; bottom: 0px;">
-  <img class="door" src="/images/kitchen_door.png" style="left: 555px; bottom: 0px;">
-  <img class="shelf" src="/images/kitchen_shelf.png" style="left: 15px; bottom: 354px;">
-  <img class="shelf" src="/images/kitchen_shelf.png" style="left: 15px; bottom: 440px;">
-  <img class="pot" src="/images/kitchen_pot.png" style="left: 90px; bottom: 368px;">
-  <img class="window" src="/images/kitchen_window.png" style="left: 310px; bottom: 356px;">
-</div> -->
-
 <div class="room <%= @background.name %> " style="background: transparent url('<%= @background.img_url %>')">
   <% @background.items.each do |item| %>
     <img src="<%= item.img_url %>" style="left:<%= item.x_pos %>px; bottom:<%= item.y_pos %>px;" data-message="<%= item.description %>">
@@ -19,14 +7,7 @@
     <%= render "dialogues/dialogue" %>
   </div>
   <%= render "dialogues/character" %>
-<!--   <img src="/images/character_eggplant.png" style="right: 0px; bottom: 0px;"> -->
 </div>
 
 
-<div class="something" style="left: <%= @door.x_pos %>; "
-
-
-
-
-<%= link_to 'Edit', edit_background_path(@background) %> |
-<%= link_to 'Back', backgrounds_path %>
+<div class="something" style="left: <%= @door.x_pos %>; "></div>

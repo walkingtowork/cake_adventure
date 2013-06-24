@@ -184,10 +184,16 @@ sleeping_cat        = Item.create(:name          => 'sleeping_cat',
                       )
 
 # CONVERSATION
-intro   = Conversation.create(:name           => 'intro',
+intro    = Conversation.create(:name          => 'intro',
                               :background_id  => '1',
                               :character_id   => '1',
                               :character_id   => '2'
+                      )
+backyard = Conversation.create(:name          => 'backyard',
+                               :background_id => '2',
+                               :character_id  => '1',
+                               :character_id  => '2',
+                               :character_id  => '3'
                       )
 
 

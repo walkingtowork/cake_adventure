@@ -16,7 +16,7 @@ class BackgroundsController < ApplicationController
     @background = Background.find_by_name(params[:id])
     @door =  Item.find_by_name("door")
 
-    @dialogue = Conversation.find_by_background_id(@background.id).dialogues[0]
+    @dialogue = Conversation.where(:background_id => @background.id).first.dialogues[0]
 
     respond_to do |format|
       format.html # show.html.erb
