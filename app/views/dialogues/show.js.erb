@@ -1,3 +1,10 @@
-var dialogue_box= $('#dialogue_box');
-dialogue_box.text('<%= j @dialogue.statement %>');
+var dialogue_box = $('#dialogue_box');
+<% if @dialogue %>
+  dialogue_box.data('next_url', '/dialogues/<%= @dialogue.id.to_i + 1 %>.js').text('<%= j @dialogue.statement %>')
+  $('#character').attr('src', '<%= @dialogue.character.img_url %>');
+<% else %>
+  dialogue_box.hide();
+  $('#character').hide();
+  $('img').on('click', show_item_message);
+<% end %>
 

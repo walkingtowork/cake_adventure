@@ -13,7 +13,7 @@ class DialoguesController < ApplicationController
   # GET /dialogues/1
   # GET /dialogues/1.json
   def show
-    @dialogue = Dialogue.find(params[:id])
+    @dialogue = Dialogue.find_by_id(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb

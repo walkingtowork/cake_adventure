@@ -85,6 +85,12 @@ door    = Item.create(:name          => 'door',
                       :scene_id      => 1
                       )
 
+# CONVERSATION
+intro   = Conversation.create(:name           => 'intro',
+                              :background_id  => '1',
+                              :character_id   => '1',
+                              :character_id   => '2'
+                      )
 
 
 # DIALOGUE
